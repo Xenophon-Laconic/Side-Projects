@@ -1,0 +1,31 @@
+# Compiler
+CC = gcc
+
+# Compiler Flags
+CFLAGS = -Wall -Wextra -Werror -Wpedantic -std=c18
+
+# Libraries
+LIBS = -lflann -llz4
+LDFLAGS = -L/lib/x86_64-linux-gnu
+
+# Source Files
+SRC = bulk_sim.c
+OBJ = $(SRC:.c=.o)
+
+# Output Executable
+TARGET = bulk_sim
+
+# Default Rule
+all: $(TARGET)
+
+# Linking
+$(TARGET): $(OBJ)
+	$(CC) $(CFLAGS) $(OBJ) -o $(TARGET) $(LDFLAGS) $(LIBS)
+
+# Compiling C files
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
+
+# Clean Build Files
+clean:
+	rm -f $(OBJ) $(TARGET)
