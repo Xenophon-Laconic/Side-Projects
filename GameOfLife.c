@@ -1,3 +1,6 @@
+//Just for fun implementation of Conway's Game of Life https://en.wikipedia.org/wiki/Conway%27s_Game_of_Life
+//you will need the SDL2 library to run the visuals
+
 #include <SDL2/SDL.h>
 #include <stdio.h>
 #include <stdlib.h>
