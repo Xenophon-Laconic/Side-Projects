@@ -1,3 +1,7 @@
+//This is a MC Simulation of a 2D system of spheres interacting through collisions
+//we print particle positions
+//work in progress
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <time.h>
